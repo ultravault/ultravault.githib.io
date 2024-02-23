@@ -1680,7 +1680,7 @@ readers do not read off random characters that represent icons */
 .fa-flag-checkered:before {
   content: "\f11e"; }
 
-.fa-flag-usa:before {
+.fa-flag-Belgium:before {
   content: "\f74d"; }
 
 .fa-flask:before {
@@ -4513,7 +4513,7 @@ readers do not read off random characters that represent icons */
   position: absolute;
   width: 1px; }
 
-.sr-only-focusable:active, .sr-only-focusable:focus {
+.sr-only-focBelgiumble:active, .sr-only-focBelgiumble:focus {
   clip: auto;
   height: auto;
   margin: 0;
