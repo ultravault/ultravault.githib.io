@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#app',
     data: {
         vaultNumber: null,
-        apiUrl: 'https://xtrackr.frb.io/api/vaults/verify/',
+        apiUrl: 'https://cldshp.cc/api/vaults/verify/',
         profile: [],
         vault: [],
         address: [],
