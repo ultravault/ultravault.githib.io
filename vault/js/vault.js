@@ -14,7 +14,7 @@ var app = new Vue({
                 this.processForm();
             } else {
                 document.getElementById('error').className = 'block text-red-700 mb-6 tracking-widest'
-                document.getElementById('error').innerHTML = 'Reference or Security code required';
+                document.getElementById('error').innerHTML = 'Vault number or Security code required';
             }
 
         },
@@ -37,30 +37,30 @@ var app = new Vue({
 
                     document.getElementById('loading').className = 'hidden';
 
-                    if(!res.data.success) {
+
+                    // console.log(res.data)
+
+                    if(!res.success) {
                         this.errorMessage = res.data.message
                         document.getElementById('error').className = 'block text-red-700 mb-6 tracking-widest'
                         document.getElementById('error').innerHTML = this.errorMessage
 
-                        // console.log('error has happened');
-
                     } 
-
-                    if(res.data.data.success) {
-                        
-                        console.log(res.data.data.business_profile + ' true-true');
                     
+                    if(res.data.success) {
 
-                        this.profile = res.data.data.business_profile;
+                        // console.log('success')
+
+                        this.profile = res.data.data.profile;
                         this.vault = res.data.data.vault;
-                        this.address = res.data.data.vault.address;
+                        this.address = res.data.data.address;
 
                         // console.log(res);
 
                         // document.getElementById('error').className = 'hidden'
                     
                         document.getElementById('error').className = 'block text-green-700 mb-6 tracking-widest'
-                        document.getElementById('error').innerHTML = 'Success. Redirecting in 5 seconds...'
+                        document.getElementById('error').innerHTML = 'Code successfully checked. You are been redirected.'
 
                         setTimeout(function () {
                             
